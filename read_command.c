@@ -33,7 +33,7 @@ char *read_command(void)
 		}
 
 		strcpy(command + ptrlen, line);
-			if (line[linesize - 1] == '\n')
+		if (line[linesize - 1] == '\n')
 		{
 			if (linesize == 1 || line[linesize - 2] != '\\')
 				return (command);
