@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
-* main - Displays prompt for user to input a command, reads the command and prints back the command
+* main - Prompt appears for user to input a command, reads it and excecutes it.
 * Return: 0
 */
 
-int main()
+int main(void)
 {
 	char *command;
 
