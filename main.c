@@ -20,7 +20,7 @@ int main(void)
 		/* if command is empty exit*/
 		if (!command)
 			exit(EXIT_SUCCESS);
-
+	
 		/* skip iteration if user enters a newline or command is null*/
 		if (command[0] == '\0' || strcmp(command, "\n") == 0)
 		{
