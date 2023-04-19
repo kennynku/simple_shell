@@ -1,13 +1,14 @@
 #include "shell.h"
 
 /**
- * main - Prompt appears for user to input a command, reads it and excecutes it.
+ * main - Prompt appears for user to input a command, reads and excecutes it.
  * Return: 0
  */
 
 int main(void)
 {
 	char *command, **tokens;
+	unsigned int i;
 
 	while (1)
 	{
@@ -37,9 +38,9 @@ int main(void)
 
 		/* tokenize the string */
 		tokens = tokenizer(command);
-
-		/* prints back the entered command into the shell */
-		printf("%s\n", command);
+		/*to print array */
+		for (i = 0; tokens && tokens[i]; i++)
+			printf("%s\n", tokens[i]);
 
 		/* frees command to prevent memory leak*/
 		free(command);
