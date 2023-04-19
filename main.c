@@ -1,13 +1,13 @@
 #include "shell.h"
 
 /**
-* main - Prompt appears for user to input a command, reads it and excecutes it.
-* Return: 0
-*/
+ * main - Prompt appears for user to input a command, reads it and excecutes it.
+ * Return: 0
+ */
 
 int main(void)
 {
-	char *command;
+	char *command, **tokens;
 
 	while (1)
 	{
@@ -20,7 +20,7 @@ int main(void)
 		/* if command is empty exit*/
 		if (!command)
 			exit(EXIT_SUCCESS);
-	
+
 		/* skip iteration if user enters a newline or command is null*/
 		if (command[0] == '\0' || strcmp(command, "\n") == 0)
 		{
@@ -35,11 +35,15 @@ int main(void)
 			break;
 		}
 
+		/* tokenize the string */
+		tokens = tokenizer(command);
+
 		/* prints back the entered command into the shell */
 		printf("%s\n", command);
 
 		/* frees command to prevent memory leak*/
 		free(command);
+		free(tokens);
 	}
 	return (0);
 }
