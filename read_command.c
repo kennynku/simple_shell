@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 
 /**
 * read_command - reads the user entered command

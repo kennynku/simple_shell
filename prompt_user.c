@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 
 /**
 * prompt1 - asks user to enter a command

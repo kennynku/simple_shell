@@ -1,5 +1,5 @@
-#ifndef SHELL_H
-#define SHELL_H
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -12,4 +12,4 @@ void prompt2(void);
 char *read_command(void);
 char **tokenizer(char *command);
 
-#endif /* SHELL_H */
+#endif /* MAIN_H*/
