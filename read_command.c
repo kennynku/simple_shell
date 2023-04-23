@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 
 /**
 * read_command - reads the user entered command
@@ -33,15 +33,17 @@ char *read_command(void)
 		}
 
 		strcpy(command + ptrlen, line);
-		if (line[linesize - 1] == '\n')
+			if (line[linesize - 1] == '\n')
 		{
 			if (linesize == 1 || line[linesize - 2] != '\\')
+				free(line);
 				return (command);
 			command[ptrlen + linesize - 2] = '\0';
 			linesize -= 2;
 			prompt2();
 		}
 		ptrlen += linesize;
+		
 	}
 
 	return (command);
