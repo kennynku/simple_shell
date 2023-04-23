@@ -1,48 +1,58 @@
 #include "shell.h"
 
 /**
- * main - Prompt appears for user to input a command, reads and excecutes it.
- * Return: 0
- */
-
-int main(void)
+* main - carries out the read, execute then print output loop
+* @ac: argument count
+* @av: argument vector
+*
+* Return: 0
+*/
+int main(int ac, char **av)
 {
 	char *command, **tokens;
 	unsigned int i;
+	(void)ac;
+	(void)av;
+
 
 	while (1)
 	{
-		/* prompts the user to enter a command */
+		/* prompt the user to enter a command */
 		prompt1();
 
-		/* reads the inputted command and stores it in the command var*/
+		/* read the command and store it */
 		command = read_command();
 
-		/* if command is empty exit*/
+		/* if command is empty exit with success */
 		if (!command)
 			exit(EXIT_SUCCESS);
 
-		/* skip iteration if user enters a newline or command is null*/
+		/* if user entered a newline or the command is null skip this iteration */
 		if (command[0] == '\0' || strcmp(command, "\n") == 0)
 		{
 			free(command);
 			continue;
 		}
 
-		/* if entered command is exit, exit the funtion*/
+		/* if the user entered exit end the loop */
 		if (strcmp(command, "exit\n") == 0)
 		{
 			free(command);
 			break;
 		}
+		if (strcmp(command, "env\n") == 0)
+                {
+                        print_env();
+                        break;
+                }
 
 		/* tokenize the string */
 		tokens = tokenizer(command);
-		/*to print array */
+		/*to print array  */
 		for (i = 0; tokens && tokens[i]; i++)
-			printf("%s\n", tokens[i]);
-
-		/* frees command to prevent memory leak*/
+			printf("%s\n",tokens[i]);
+		
+		/* preventing memory leaks */
 		free(command);
 		free(tokens);
 	}
