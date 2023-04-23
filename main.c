@@ -37,11 +37,9 @@ int main(int ac, char **av)
 			free(command);
 			break;
 		}
-
 		if (_strcmp(command, "env\n") == 0)
-    {
-      print_env();
-    }
+      			print_env();
+
 		/* tokenize the string */
 		tokens = tokenizer(command);
 		/*to print array  */
