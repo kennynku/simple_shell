@@ -43,7 +43,6 @@ char *read_command(void)
 			prompt2();
 		}
 		ptrlen += linesize;
-		
 	}
 
 	return (command);
