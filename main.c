@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 
 /**
  * main - Prompt appears for user to input a command, reads and excecutes it.
