@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Prompt for user input
+read -p "Enter commit message: " message
+
+# Set git config for the current user
+git config user.name "Destiny Saturday"
+git config user.email "yiradesat@gmail.com"
+
+# Commit the changes with the co-author line appended to the commit message
+git add .
+git commit -m "`echo -e "$message\n\nCo-authored-by: K NKUATSANA <nkuatsanakeneuoe@gmail.com>"`"
+git push
