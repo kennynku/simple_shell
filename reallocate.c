@@ -1,5 +1,10 @@
-#include "main.h"
-
+#include "shell.h"
+/**
+ *reallocate- adds extera memomry
+ *@pointer: old pointer
+ *@size: size of reallocation
+ *Return: new pointer
+ */
 
 
 char **reallocate(char **pointer, size_t *size)
