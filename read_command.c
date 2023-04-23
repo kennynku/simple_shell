@@ -38,29 +38,13 @@ char *read_command(void)
 			if (linesize == 1 || line[linesize - 2] != '\\')
 				free(line);
 				return (command);
-			command[ptrlen + linesize - 2] = '\0';
+				command[ptrlen + linesize - 2] = '\0';
 			linesize -= 2;
 			prompt2();
 		}
 		ptrlen += linesize;
-	}#include "shell.h"
 
-/**
-* print_env - prints the environment string to stdout
-*
-* Return: 0
-*/
-int print_env(void)
-{
-	int x;
-
-	for (x = 0; environ[x] != NULL; x++)
-	{
-		write(STDOUT_FILENO, environ[x], strlen(environ[x]));
-		write(STDOUT_FILENO, "\n", 1);
 	}
-	return (0);
-}
 
 	return (command);
 }

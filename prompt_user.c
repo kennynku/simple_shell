@@ -1,20 +1,19 @@
 #include "shell.h"
 
 /**
-* prompt1 - asks user to enter a command
+* prompt1 - prints $ to let user know the program is ready to take their input
 * Return: no return
 */
-
 void prompt1(void)
 {
-	fprintf(stderr, "# Enter a command $ ");
+	print_s("$ ");
 }
 
 /**
-* prompt2 - Displays when user is inputting muli-line character
+* prompt2 - prints when user enters a multi-line command
 * Return: no return
 */
 void prompt2(void)
 {
-	fprintf(stderr, "> ");
+	print_s("> ");
 }

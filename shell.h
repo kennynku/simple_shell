@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef SHELL_H
+#define SHELL_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,4 +19,4 @@ int _strcmp(char *s1, char *s2);
 int _putchar(char c);
 int print_s(char *s);
 
-#endif /* MAIN_H*/
+#endif /* SHELL_H */

@@ -1,20 +1,21 @@
 #include "shell.h"
 
 /**
-* _strcmp - compares two strings
-* @s1: string to be compared to s2
-* @s2: string to be compared to s1
+* find_path - finds the path of a function based on program name
+* @name: name of program
 *
-* Return: the difference between s1 and s2
+* Return: absolute path to program
 */
-int _strcmp(char *s1, char *s2)
+char *find_path(char *name)
 {
-	int i = 0, output;
+	int x;
 
-	while (*(s1 + i) == *(s2 + i) && *(s1 + i) != '\0')
-		i++;
-
-	output = (*(s1 + i) - *(s2 + i));
-
-	return (output);
+	for (x = 0; environ[x] != NULL; x++)
+	{
+		if (strcmp(environ[x], name) == 0)
+			break;
+		else if (environ[x + 1] == NULL)
+			perror("find path");
+	}
+	return (environ[x]);
 }
