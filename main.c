@@ -8,7 +8,6 @@
 int main(int ac, char **av)
 {
 	char *command, **tokens;
-	unsigned int i;
 	(void)ac;
 	(void)av;
 
@@ -37,17 +36,15 @@ int main(int ac, char **av)
 			free(command);
 			break;
 		}
-		if (_strcmp(command, "env\n") == 0)
-      			print_env();
 
+		if (_strcmp(command, "env\n") == 0)
+    {
+      print_env();
+    }
 		/* tokenize the string */
 		tokens = tokenizer(command);
-		/*to print array  */
-		for (i = 0; tokens && tokens[i]; i++)
-		{
-			print_s(tokens[i]);
-			_putchar('\n');
-		}
+
+		execution(tokens);
 		/* preventing memory leaks */
 		free(command);
 		free(tokens);
