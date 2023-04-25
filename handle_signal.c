@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 
 /**
  *handle_signal- it keeps track is interactive mode

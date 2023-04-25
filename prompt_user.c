@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 
 /**
 * prompt_user - prints $ to let user know the program is

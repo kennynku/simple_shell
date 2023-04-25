@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 
 /**
  * execution - executes commands entered by users

@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 
 /**
 * find_path - finds the path from the global enviroment

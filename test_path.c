@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 
 /**
 * test_path - checks whether path is valid

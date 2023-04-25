@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 
 /**
 * append_path - adds path to command

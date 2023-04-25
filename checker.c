@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 /**
  *checker- checks to see weather its a built in function
  *@cmd: tokenized user input

@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 /**
 * reallocate- adds extera memomry
 * @pointer: ptr to previouslly allocated memory
