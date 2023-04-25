@@ -7,7 +7,7 @@
  */
 int command_checker(char **cmd, char *buf)
 {
-	if (handle_builtin(cmd, buf))
+	if (execute_builtin(cmd, buf))
 		return (1);
 	else if (**cmd == '/')
 	{

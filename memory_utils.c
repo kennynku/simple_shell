@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
-* free_buffers - frees buffers
+* free_input_buffer - frees buffers
 * @buf: buffer to be freed
 *
 * Return: no return
 */
-void free_buffers(char **buf)
+void free_input_buffer(char **buf)
 {
 	int i = 0;
 

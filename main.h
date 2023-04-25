@@ -22,9 +22,9 @@ void prompt_user(void);
 void handle_signal(int m);
 char **tokenizer(char *line);
 char *test_path(char **path, char *command);
-char *append_path(char *path, char *command);
-int handle_builtin(char **command, char *line);
-void exit_cmd(char **command, char *line);
+char *append_path_utility(char *path, char *command);
+int execute_builtin(char **command, char *line);
+void exit_command_handler(char **command, char *line);
 
 void print_env(void);
 
@@ -39,7 +39,7 @@ void execution(char *cp, char **cmd);
 char *find_path(void);
 
 /* helper function for efficient free */
-void free_buffers(char **buf);
+void free_input_buffer(char **buf);
 
 struct builtin
 {
