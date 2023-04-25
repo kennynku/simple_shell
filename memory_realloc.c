@@ -1,12 +1,12 @@
 #include "main.h"
 /**
-* reallocate- adds extera memomry
+* memory_realloc- adds extera memomry
 * @pointer: ptr to previouslly allocated memory
 * @size: new size
 * Return: new pointer
 */
 
-char **reallocate(char **pointer, size_t *size)
+char **memory_realloc(char **pointer, size_t *size)
 {
 	char **new_pointer;
 	size_t i;

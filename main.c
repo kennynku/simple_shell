@@ -23,21 +23,21 @@ int main(int ac, char **av, char *envp[])
 		free_input_buffer(command);
 		free_input_buffer(paths);
 		free(pathcommand);
-		prompt_user();
+		user_prompt();
 		linesize = getline(&line, &bufsize, stdin);
 		if (linesize < 0)
 			break;
 		info.ln_count++;
 		if (line[linesize - 1] == '\n')
 			line[linesize - 1] = '\0';
-		command = tokenizer(line);
+		command = shell_tokenizer(line);
 		if (command == NULL || *command == NULL || **command == '\0')
 			continue;
 		if (command_checker(command, line))
 			continue;
 		path = track_path();
-		paths = tokenizer(path);
-		pathcommand = test_path(paths, command[0]);
+		paths = shell_tokenizer(path);
+		pathcommand = path_tester(paths, command[0]);
 		if (!pathcommand)
 			perror(av[0]);
 		else

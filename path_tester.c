@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
-* test_path - checks whether path is valid
+* path_tester - checks whether path is valid
 * @path: tokenized path
 * @command: user entered command
 *
 * Return: path appended with command on success
 * NULL on failure
 */
-char *test_path(char **path, char *command)
+char *path_tester(char **path, char *command)
 {
 	int i = 0;
 	char *output;

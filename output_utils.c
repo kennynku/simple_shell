@@ -13,12 +13,12 @@ int _putchar(char c)
 }
 
 /**
-* print_s - prints a string
+* print_string - prints a string
 * @s: string to be printed
 *
 * Return: number of characters printed
 */
-int print_s(char *s)
+int print_string(char *s)
 {
 	int i = 0;
 
