@@ -19,7 +19,7 @@ extern __sighandler_t signal(int __sig, __sighandler_t __handler);
 /* handle built ins */
 int command_checker(char **cmd, char *buf);
 void prompt_user(void);
-void handle_signal(int m);
+void signal_handler(int m);
 char **tokenizer(char *line);
 char *test_path(char **path, char *command);
 char *append_path_utility(char *path, char *command);
@@ -36,7 +36,7 @@ char *_strdup(char *s);
 char *_strchr(char *s, char c);
 
 void execution(char *cp, char **cmd);
-char *find_path(void);
+char *track_path(void);
 
 /* helper function for efficient free */
 void free_input_buffer(char **buf);

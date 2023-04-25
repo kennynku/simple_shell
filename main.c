@@ -17,7 +17,7 @@ int main(int ac, char **av, char *envp[])
 	(void)envp, (void)av;
 	if (ac < 1)
 		return (-1);
-	signal(SIGINT, handle_signal);
+	signal(SIGINT, signal_handler);
 	while (1)
 	{
 		free_input_buffer(command);
@@ -35,7 +35,7 @@ int main(int ac, char **av, char *envp[])
 			continue;
 		if (command_checker(command, line))
 			continue;
-		path = find_path();
+		path = track_path();
 		paths = tokenizer(path);
 		pathcommand = test_path(paths, command[0]);
 		if (!pathcommand)
