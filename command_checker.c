@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- *checker- checks to see weather its a built in function
+ *command_checker- checks to see weather its a built in function
  *@cmd: tokenized user input
  *@buf: line drived fromgetline function
  *Return: 1 if cmd excuted 0 if cmd is not executed
  */
-int checker(char **cmd, char *buf)
+int command_checker(char **cmd, char *buf)
 {
 	if (handle_builtin(cmd, buf))
 		return (1);
