@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  *command_checker- checks to see weather its a built in function
  *@cmd: tokenized user input
@@ -11,7 +12,7 @@ int command_checker(char **cmd, char *buf)
 		return (1);
 	else if (**cmd == '/')
 	{
-		execution(cmd[0], cmd);
+		shell_execution(cmd[0], cmd);
 		return (1);
 	}
 	return (0);

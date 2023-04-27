@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * execution - executes commands entered by users
+ * shell_execution - executes commands entered by users
  *@cp: command
  *@cmd:vector array of pointers to commands
  * Return: 0
  */
-void execution(char *cp, char **cmd)
+void shell_execution(char *cp, char **cmd)
 {
 	pid_t child_pid;
 	int status;
@@ -26,3 +26,4 @@ void execution(char *cp, char **cmd)
 	else
 		wait(&status);
 }
+

@@ -41,7 +41,7 @@ int main(int ac, char **av, char *envp[])
 		if (!pathcommand)
 			perror(av[0]);
 		else
-			execution(pathcommand, command);
+			shell_execution(pathcommand, command);
 	}
 	if (linesize < 0 && flags.interactive)
 		write(STDERR_FILENO, "\n", 1);

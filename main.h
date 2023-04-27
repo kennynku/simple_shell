@@ -35,7 +35,7 @@ int _strncmp(char *s1, char *s2, int n);
 char *_sting_duplicate(char *s);
 char *_find_character(char *s, char c);
 
-void execution(char *cp, char **cmd);
+void shell_execution(char *cp, char **cmd);
 char *track_path(void);
 
 /* helper function for efficient free */
